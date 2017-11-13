@@ -44,6 +44,9 @@ class FollowAfterReply
     {
         $actor = $event->actor;
 
+        // DFSKLARD: very important code sample.
+        // Shows us how to WRITE to the DB to say "this user DEFINITELY follows this discussion".
+
         if ($actor && $actor->exists && $actor->getPreference('followAfterReply')) {
             $this->assertRegistered($actor);
 

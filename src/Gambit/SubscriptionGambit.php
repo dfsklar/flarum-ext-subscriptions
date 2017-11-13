@@ -31,6 +31,7 @@ class SubscriptionGambit extends AbstractRegexGambit
 
         // might be better as `id IN (subquery)`?
         $method = $negate ? 'whereNotExists' : 'whereExists';
+
         $search->getQuery()->$method(function ($query) use ($actor, $matches) {
             $query->select(app('flarum.db')->raw(1))
                   ->from('users_discussions')
