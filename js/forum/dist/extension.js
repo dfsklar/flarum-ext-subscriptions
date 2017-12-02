@@ -65,11 +65,12 @@ System.register('flarum/subscriptions/addSubscriptionControls', ['flarum/extend'
 
         var subscription = discussion.subscription() || 'none';
 
-        items.add('subscription', Button.component({
-          children: states[subscription].label,
-          icon: states[subscription].icon,
-          onclick: discussion.save.bind(discussion, { subscription: states[subscription].save })
-        }));
+        if (false) // DFSKLARD does not want these.
+          items.add('subscription', Button.component({
+            children: states[subscription].label,
+            icon: states[subscription].icon,
+            onclick: discussion.save.bind(discussion, { subscription: states[subscription].save })
+          }));
       }
     });
 

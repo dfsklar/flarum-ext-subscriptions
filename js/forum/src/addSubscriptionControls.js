@@ -16,6 +16,7 @@ export default function addSubscriptionControls() {
 
       const subscription = discussion.subscription() || 'none';
 
+      if (false)   // DFSKLARD does not want these.
       items.add('subscription', Button.component({
         children: states[subscription].label,
         icon: states[subscription].icon,
