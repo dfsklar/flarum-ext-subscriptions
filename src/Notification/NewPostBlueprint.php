@@ -29,6 +29,8 @@ class NewPostBlueprint implements BlueprintInterface, MailableInterface
     public function __construct(Post $post)
     {
         $this->post = $post;
+        $this->access_token_object = $post->user->accessTokens()->get()->last();  // Http/AccessToken object
+        $this->access_token = $this->access_token_object->id;  // The actual 40-character string
     }
 
     /**
