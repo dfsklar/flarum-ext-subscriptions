@@ -72,7 +72,8 @@ class SendNotificationWhenReplyIsPosted
         $notify = $discussion->readers()
             ->where('users.id', '!=', $post->user_id)
             ->where('users_discussions.subscription', 'follow')
-           //DFSKLARD only temporary! ->where('users_discussions.read_number', $discussion->last_post_number)
+	    // DFSKLARD: for debugging, commentout the following line so notifications are sent always for every individual reply
+            ->where('users_discussions.read_number', $discussion->last_post_number)
             ->get();
 
         $this->notifications->sync(
