@@ -1,5 +1,5 @@
 {
-    "name": "flarum/flarum-ext-subscriptions",
+    "name": "dfsklar/flarum-ext-subscriptions",
     "description": "Allow users to follow discussions and receive notifications for new posts.",
     "type": "flarum-extension",
     "keywords": ["discussion"],
