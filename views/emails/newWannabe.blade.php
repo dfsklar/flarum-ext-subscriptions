@@ -5,7 +5,7 @@ Hi {!! $user->display_name !!},
 To approve or reject this request, please visit your group home at:
 {!! app()->url() !!}/autologin.php?token={!! $user->accessTokens()->get()->last()->id !!}&redirect=/t/{!! $blueprint->group->slug !!}
 
-Once there, use the "...More" menu to access the approval console.
+Once there, use the "...More" menu to access the approval dialog.
 
 May God Richly Bless You
 
