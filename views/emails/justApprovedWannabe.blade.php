@@ -1,12 +1,15 @@
-Hey {!! $user->display_name !!}!
+Hi {!! $user->display_name !!},
 
-You have just been approved for membership in the "{!! $blueprint->group->name_singular !!}" community group.
+Your request to join the group called "{!! $blueprint->group->name_singular !!}" has just been approved!
 
-To get started on your participation, simply use this convenient link:
+You are now able to interact with other members.  To begin participating now, simply use the following link:
 
 {!! app()->url() !!}/autologin.php?token={!! $user->accessTokens()->get()->last()->id !!}&redirect=/t/{!! $blueprint->group->slug !!}
 
-Enjoy!
+We hope you enjoy sharing your faith with others.
+
+May God Richly Bless You
+
 
 
 
